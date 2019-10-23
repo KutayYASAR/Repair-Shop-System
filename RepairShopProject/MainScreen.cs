@@ -62,7 +62,7 @@ namespace RepairShopProject
                 CBICategory.SelectedItem = DGInventory.Rows[e.RowIndex].Cells[5].Value.ToString();
                 TBIManifact.Text = DGInventory.Rows[e.RowIndex].Cells[6].Value.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please only select the row header! ");
             }
@@ -115,7 +115,7 @@ namespace RepairShopProject
                 TBCPhone.Text = DGCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
                 TBCMail.Text = DGCustomer.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
-            catch (Exception x)
+            catch (Exception)
             {
                 MessageBox.Show("Please only select the row header! ");
             }
