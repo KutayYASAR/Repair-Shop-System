@@ -17,18 +17,6 @@ namespace RepairShopProject
             InitializeComponent();
         }
 
-        private void BTBack_Click(object sender, EventArgs e)
-        {
-            
-            this.Hide();
-            Login l = new Login();
-            l.Closed += (s, args) => this.Close();
-            l.StartPosition = FormStartPosition.Manual;
-            l.Location = new Point(this.Location.X, this.Location.Y);
-            l.Show();
-            
-        }
-
         private void BTRegister_Click(object sender, EventArgs e)
         {
             SQLiteConnection con = new SQLiteConnection(@"data source = C:\Users\Kutay\Desktop\RepairShop.db");
@@ -44,6 +32,46 @@ namespace RepairShopProject
             TBName.Clear();TBSurname.Clear();TBMail.Clear();TBPassword.Clear();TBPhone.Clear();
             lblMsg.ForeColor = Color.DarkGreen;
             lblMsg.Text = "Succesfull Registration";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Closed += (s, args) => this.Close();
+            l.StartPosition = FormStartPosition.Manual;
+            l.Location = new Point(this.Location.X, this.Location.Y);
+            l.Show();
+        }
+
+        private void TBName_Click(object sender, EventArgs e)
+        {
+            TBName.Clear();
+        }
+
+        private void TBSurname_Click(object sender, EventArgs e)
+        {
+            TBSurname.Clear();
+        }
+
+        private void TBPhone_Click(object sender, EventArgs e)
+        {
+            TBPhone.Clear();
+        }
+
+        private void TBMail_Click(object sender, EventArgs e)
+        {
+            TBMail.Clear();
+        }
+
+        private void TBPassword_Click(object sender, EventArgs e)
+        {
+            TBPassword.Clear();
+        }
+
+        private void TBConfirm_Click(object sender, EventArgs e)
+        {
+            TBConfirm.Clear();
         }
     }
 }

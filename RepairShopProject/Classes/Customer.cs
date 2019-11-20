@@ -55,13 +55,34 @@ namespace RepairShopProject.Classes
             con.Close();
 
         }
-        public void updateData(DataGridView Grid, string txtQuery)
+        public void searchCustomer(string Name, string Surname, string Contact, string Email, DataGridView Grid)
         {
+            setConnection();
+            con.Open();
+            cmd = con.CreateCommand();
+            string CommandText = "SELECT * FROM Customer WHERE Name LIKE'%" + Name + "%'Surname LIKE'%" + Surname + "%'";
+            DB = new SQLiteDataAdapter(CommandText, con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            Grid.DataSource = DT;
+            con.Close();
+        }
+        public void updateCustomer(string Name, string Surname, string Contact, string Email,int ID, DataGridView Grid)
+        {
+            string txtQuery = "update Customer set Name='" + Name + "',Surname='" + Surname + "',Contact='" + Contact + "',Email='" + Email + "' where ID='" + ID + "'";
             executeQuery(txtQuery);
             loadData(Grid);
         }
-        public void removeData(DataGridView Grid, string txtQuery)
+        public void removeCustomer(int ID,DataGridView Grid)
         {
+            string txtQuery = "delete from Customer where ID='" + ID + "'";
+            executeQuery(txtQuery);
+            loadData(Grid);
+        }
+        public void addCustomer(string Name,string Surname,string Contact,string Email,DataGridView Grid)
+        {
+            string txtQuery = "insert into Customer (Name,Surname,Contact,Email)values('" + Name + "','" + Surname + "','" + Contact + "','" + Email + "')";
             executeQuery(txtQuery);
             loadData(Grid);
         }

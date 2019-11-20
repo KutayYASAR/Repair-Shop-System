@@ -69,7 +69,6 @@
     <Compile Include="Classes\Department.cs" />
     <Compile Include="Classes\Employee.cs" />
     <Compile Include="Classes\GiftCard.cs" />
-    <Compile Include="Classes\Inventory.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\Product.cs" />
@@ -106,6 +105,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -129,12 +129,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\appointment.png" />
+    <Content Include="Assets\avatar %281%29.png" />
     <Content Include="Assets\boxes.png" />
     <Content Include="Assets\credit-card.png" />
     <Content Include="Assets\customer-support.png" />
+    <Content Include="Assets\envelope.png" />
+    <Content Include="Assets\icon.png" />
+    <Content Include="Assets\key %281%29.png" />
     <Content Include="Assets\left-arrow.png" />
     <Content Include="Assets\man.png" />
     <Content Include="Assets\manufacture.png" />
+    <Content Include="Assets\phone-call.png" />
     <Content Include="Assets\tools.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

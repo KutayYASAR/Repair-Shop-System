@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TPCustomers = new System.Windows.Forms.TabPage();
+            this.BTCSearch = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.BTCClear = new System.Windows.Forms.Button();
             this.DGCustomer = new System.Windows.Forms.DataGridView();
@@ -48,6 +49,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.TBInventory = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.BTClear = new System.Windows.Forms.Button();
             this.DGInventory = new System.Windows.Forms.DataGridView();
             this.TBIId = new System.Windows.Forms.TextBox();
@@ -99,6 +101,7 @@
             // TPCustomers
             // 
             this.TPCustomers.BackColor = System.Drawing.Color.White;
+            this.TPCustomers.Controls.Add(this.BTCSearch);
             this.TPCustomers.Controls.Add(this.label8);
             this.TPCustomers.Controls.Add(this.BTCClear);
             this.TPCustomers.Controls.Add(this.DGCustomer);
@@ -123,6 +126,17 @@
             this.TPCustomers.TabIndex = 0;
             this.TPCustomers.Text = "Customers";
             this.TPCustomers.Enter += new System.EventHandler(this.TPCustomers_Enter);
+            // 
+            // BTCSearch
+            // 
+            this.BTCSearch.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTCSearch.Location = new System.Drawing.Point(1092, 333);
+            this.BTCSearch.Name = "BTCSearch";
+            this.BTCSearch.Size = new System.Drawing.Size(134, 67);
+            this.BTCSearch.TabIndex = 41;
+            this.BTCSearch.Text = "SEARCH";
+            this.BTCSearch.UseVisualStyleBackColor = true;
+            this.BTCSearch.Click += new System.EventHandler(this.BTCSearch_Click);
             // 
             // label8
             // 
@@ -150,10 +164,13 @@
             this.DGCustomer.AllowUserToAddRows = false;
             this.DGCustomer.AllowUserToDeleteRows = false;
             this.DGCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGCustomer.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGCustomer.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.DGCustomer.Location = new System.Drawing.Point(10, 88);
             this.DGCustomer.Name = "DGCustomer";
             this.DGCustomer.ReadOnly = true;
+            this.DGCustomer.RowHeadersVisible = false;
             this.DGCustomer.RowHeadersWidth = 125;
             this.DGCustomer.Size = new System.Drawing.Size(1076, 524);
             this.DGCustomer.TabIndex = 36;
@@ -275,6 +292,7 @@
             // TBInventory
             // 
             this.TBInventory.BackColor = System.Drawing.Color.White;
+            this.TBInventory.Controls.Add(this.button1);
             this.TBInventory.Controls.Add(this.BTClear);
             this.TBInventory.Controls.Add(this.DGInventory);
             this.TBInventory.Controls.Add(this.TBIId);
@@ -304,6 +322,15 @@
             this.TBInventory.Text = "Inventory";
             this.TBInventory.Enter += new System.EventHandler(this.TBInventory_Enter);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1092, 343);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 67);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "SEARCH";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // BTClear
             // 
             this.BTClear.Location = new System.Drawing.Point(1125, 63);
@@ -319,10 +346,13 @@
             this.DGInventory.AllowUserToAddRows = false;
             this.DGInventory.AllowUserToDeleteRows = false;
             this.DGInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGInventory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGInventory.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.DGInventory.Location = new System.Drawing.Point(12, 95);
             this.DGInventory.Name = "DGInventory";
             this.DGInventory.ReadOnly = true;
+            this.DGInventory.RowHeadersVisible = false;
             this.DGInventory.RowHeadersWidth = 125;
             this.DGInventory.Size = new System.Drawing.Size(1076, 524);
             this.DGInventory.TabIndex = 18;
@@ -596,5 +626,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button BTCSearch;
+        private System.Windows.Forms.Button button1;
     }
 }

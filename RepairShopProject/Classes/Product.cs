@@ -45,6 +45,25 @@ namespace RepairShopProject.Classes
         {
             con = new SQLiteConnection(@"data source = C:\Users\Kutay\Desktop\RepairShop.db");
         }
+        public void addProduct(string Name,string Manifacturer,string Model,string Category,int BuyPrice,int Amount, DataGridView Grid)
+        {
+
+            string txtQuery = "insert into Inventory (Name,Model,Amount,BuyPrice,Category,Manifact)values('" + Name + "','" + Model + "','" + Amount + "','" + BuyPrice + "','" + Category + "','" + Manifacturer + "')";
+            executeQuery(txtQuery);
+            loadData(Grid);
+        }
+        public void removeProduct(int ID,DataGridView Grid)
+        {
+            string txtQuery = "delete from Inventory where ID='" +ID +"'";
+            executeQuery(txtQuery);
+            loadData(Grid);
+        }
+        public void updateProduct(string Name, string Manifacturer, string Model, string Category, int BuyPrice, int Amount,int ID, DataGridView Grid)
+        {
+            string txtQuery = "update Inventory set Name='" + Name + "',Model='" + Model + "',Manifact='" + Manifacturer + "',Category='" + Category + "',Amount='" + Amount + "',BuyPrice='" + BuyPrice + "' where ID='" + ID + "'";
+            executeQuery(txtQuery);
+            loadData(Grid);
+        }
         public void executeQuery(string txtQuery)
         {
             setConnection();
@@ -67,16 +86,6 @@ namespace RepairShopProject.Classes
             Grid.DataSource = DT;
             con.Close();
 
-        }
-        public void updateData(DataGridView Grid,string txtQuery)
-        {
-            executeQuery(txtQuery);
-            loadData(Grid);
-        }
-        public void removeData(DataGridView Grid, string txtQuery)
-        {
-            executeQuery(txtQuery);
-            loadData(Grid);
         }
     }
 }

@@ -18,6 +18,4 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\EntityFrame
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data.SQLite.xml
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csproj.CopyComplete
-C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\x86\sqlite3.dll
-C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\x64\sqlite3.dll
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.MainScreen.resources

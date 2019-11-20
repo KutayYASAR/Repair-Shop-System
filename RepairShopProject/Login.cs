@@ -66,9 +66,20 @@ namespace RepairShopProject
                 MessageBox.Show(ex.Message);
             }
         }
-        private void Login_Load(object sender, EventArgs e)
-        {
 
+        private void TBMail_Click(object sender, EventArgs e)
+        {
+            TBMail.Clear();
+        }
+
+        private void TBPass_Click(object sender, EventArgs e)
+        {
+            TBPass.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
