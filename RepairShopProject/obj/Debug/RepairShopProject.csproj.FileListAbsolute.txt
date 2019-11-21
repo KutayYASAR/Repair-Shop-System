@@ -19,5 +19,10 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csproj.CopyComplete
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.MainScreen.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.newMainScreen.resources
-C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.CustomerUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.exe.manifest
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.application
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.exe.manifest
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.application
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.CustomersUC.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csprojAssemblyReference.cache
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.InventoryUC.resources

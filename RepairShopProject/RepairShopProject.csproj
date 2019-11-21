@@ -15,7 +15,8 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Kutay\Desktop\try1\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,8 +28,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -50,6 +51,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B012D7931F12F8E59E3E79B543BA8875770BF7C5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RepairShopProject_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -97,11 +110,11 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Supplier.cs" />
     <Compile Include="Classes\Ticket.cs" />
-    <Compile Include="CustomerUC.cs">
+    <Compile Include="CustomersUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomerUC.Designer.cs">
-      <DependentUpon>CustomerUC.cs</DependentUpon>
+    <Compile Include="CustomersUC.Designer.cs">
+      <DependentUpon>CustomersUC.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryUC.cs">
       <SubType>UserControl</SubType>
@@ -158,8 +171,11 @@
     <Compile Include="TicketUC.Designer.cs">
       <DependentUpon>TicketUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerUC.resx">
-      <DependentUpon>CustomerUC.cs</DependentUpon>
+    <EmbeddedResource Include="CustomersUC.resx">
+      <DependentUpon>CustomersUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryUC.resx">
+      <DependentUpon>InventoryUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>

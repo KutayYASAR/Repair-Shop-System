@@ -73,6 +73,28 @@ namespace RepairShopProject.Classes
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public void searchProduct(string input, DataGridView Grid)
+        {
+            string CommandText;
+            setConnection();
+            con.Open();
+            cmd = con.CreateCommand();
+            if (input.Contains("0") || input.Contains("1") || input.Contains("2") || input.Contains("3") || input.Contains("4") || input.Contains("5") || input.Contains("6") || input.Contains("7") || input.Contains("8") || input.Contains("9"))
+            {
+                CommandText = "SELECT * FROM Inventory WHERE ID LIKE'%" + input + "%'";
+            }
+            else
+            {
+                CommandText = "SELECT * FROM Inventory WHERE Name LIKE'%" + input + "%'";
+            }
+
+            DB = new SQLiteDataAdapter(CommandText, con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            Grid.DataSource = DT;
+            con.Close();
+        }
         public void loadData(DataGridView Grid)
         {
             setConnection();

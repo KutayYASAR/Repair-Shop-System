@@ -1,7 +1,9 @@
-﻿namespace RepairShopProject
+﻿using System.Runtime.InteropServices;
+namespace RepairShopProject
 {
     partial class MainScreen
     {
+      
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -38,7 +38,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.customerUC1 = new RepairShopProject.CustomerUC();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +48,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -174,20 +177,48 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel3.Controls.Add(this.customerUC1);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(215, -1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1050, 682);
             this.panel3.TabIndex = 2;
             // 
-            // customerUC1
+            // pictureBox2
             // 
-            this.customerUC1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.customerUC1.Location = new System.Drawing.Point(3, 21);
-            this.customerUC1.Name = "customerUC1";
-            this.customerUC1.Size = new System.Drawing.Size(1047, 661);
-            this.customerUC1.TabIndex = 3;
+            this.pictureBox2.BackgroundImage = global::RepairShopProject.Properties.Resources.icon1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(464, 349);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto Lt", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.label4.Location = new System.Drawing.Point(328, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(392, 77);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Repair Shop";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Lt", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.label3.Location = new System.Drawing.Point(227, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(599, 77);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Kutay\'s Electronics";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -262,6 +293,8 @@
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -286,6 +319,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private CustomerUC customerUC1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
     }
 }
