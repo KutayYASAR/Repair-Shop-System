@@ -55,12 +55,21 @@ namespace RepairShopProject.Classes
             con.Close();
 
         }
-        public void searchCustomer(string Name, string Surname, string Contact, string Email, DataGridView Grid)
+        public void searchCustomer(string input,DataGridView Grid)
         {
+            string CommandText;
             setConnection();
             con.Open();
             cmd = con.CreateCommand();
-            string CommandText = "SELECT * FROM Customer WHERE Name LIKE'%" + Name + "%'Surname LIKE'%" + Surname + "%'";
+            if (input.Contains("0")|| input.Contains("1") || input.Contains("2") || input.Contains("3") || input.Contains("4") || input.Contains("5") || input.Contains("6") || input.Contains("7") || input.Contains("8") || input.Contains("9"))
+            {
+                CommandText = "SELECT * FROM Customer WHERE Contact LIKE'%" + input + "%'";
+            }
+            else
+            {
+                CommandText = "SELECT * FROM Customer WHERE Name LIKE'%" + input + "%'";
+            }
+            
             DB = new SQLiteDataAdapter(CommandText, con);
             DS.Reset();
             DB.Fill(DS);

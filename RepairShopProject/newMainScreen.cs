@@ -69,5 +69,6 @@ namespace RepairShopProject
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }

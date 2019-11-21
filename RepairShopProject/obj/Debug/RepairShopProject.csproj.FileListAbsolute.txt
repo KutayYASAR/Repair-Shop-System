@@ -20,3 +20,4 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopP
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.MainScreen.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.newMainScreen.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.CustomerUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csprojAssemblyReference.cache

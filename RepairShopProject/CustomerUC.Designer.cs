@@ -46,7 +46,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBCSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,6 +70,7 @@
             this.BTCSearch.TabIndex = 57;
             this.BTCSearch.Text = "SEARCH";
             this.BTCSearch.UseVisualStyleBackColor = false;
+            this.BTCSearch.Click += new System.EventHandler(this.BTCSearch_Click);
             // 
             // label8
             // 
@@ -94,6 +95,7 @@
             this.BTCClear.TabIndex = 55;
             this.BTCClear.Text = "Clear";
             this.BTCClear.UseVisualStyleBackColor = false;
+            this.BTCClear.Click += new System.EventHandler(this.BTCClear_Click);
             // 
             // DGCustomer
             // 
@@ -150,6 +152,7 @@
             this.BTCUpdate.TabIndex = 52;
             this.BTCUpdate.Text = "UPDATE";
             this.BTCUpdate.UseVisualStyleBackColor = false;
+            this.BTCUpdate.Click += new System.EventHandler(this.BTCUpdate_Click);
             // 
             // BTCRemove
             // 
@@ -164,6 +167,7 @@
             this.BTCRemove.TabIndex = 51;
             this.BTCRemove.Text = "REMOVE";
             this.BTCRemove.UseVisualStyleBackColor = false;
+            this.BTCRemove.Click += new System.EventHandler(this.BTCRemove_Click);
             // 
             // BTCAdd
             // 
@@ -178,6 +182,7 @@
             this.BTCAdd.TabIndex = 50;
             this.BTCAdd.Text = "ADD";
             this.BTCAdd.UseVisualStyleBackColor = false;
+            this.BTCAdd.Click += new System.EventHandler(this.BTCAdd_Click);
             // 
             // TBCPhone
             // 
@@ -259,15 +264,15 @@
             this.label13.TabIndex = 42;
             this.label13.Text = "NAME";
             // 
-            // textBox1
+            // TBCSearch
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(754, 515);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 20);
-            this.textBox1.TabIndex = 58;
+            this.TBCSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TBCSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TBCSearch.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TBCSearch.Location = new System.Drawing.Point(754, 515);
+            this.TBCSearch.Name = "TBCSearch";
+            this.TBCSearch.Size = new System.Drawing.Size(267, 20);
+            this.TBCSearch.TabIndex = 58;
             // 
             // label1
             // 
@@ -339,7 +344,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TBCSearch);
             this.Controls.Add(this.BTCSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BTCClear);
@@ -383,7 +388,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBCSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

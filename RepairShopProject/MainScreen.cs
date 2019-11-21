@@ -136,7 +136,7 @@ namespace RepairShopProject
         private void BTCSearch_Click(object sender, EventArgs e)
         {
             var c = new Customer();
-            c.searchCustomer(TBCName.Text.Trim(), TBCSurname.Text.Trim(), TBCPhone.Text.Trim(), TBCMail.Text.Trim(), DGCustomer);
+            c.searchCustomer(TBCName.Text.Trim(), DGCustomer);
         }
     }
 }

@@ -39,5 +39,40 @@ namespace RepairShopProject
                 MessageBox.Show("Please only select the row !");
             }
         }
+
+        private void BTCAdd_Click(object sender, EventArgs e)
+        {
+            var c = new Customer();
+            c.addCustomer(TBCName.Text.Trim(), TBCSurname.Text.Trim(), TBCPhone.Text.Trim(), TBCMail.Text.Trim(), DGCustomer);
+        }
+
+        private void BTCRemove_Click(object sender, EventArgs e)
+        {
+            var c = new Customer();
+            c.removeCustomer(int.Parse(TBCId.Text.Trim()), DGCustomer);
+        }
+
+        private void BTCUpdate_Click(object sender, EventArgs e)
+        {
+            var c = new Customer();
+            c.updateCustomer(TBCName.Text.Trim(), TBCSurname.Text.Trim(), TBCPhone.Text.Trim(), TBCMail.Text.Trim(), int.Parse(TBCId.Text.Trim()), DGCustomer);
+        }
+
+        private void BTCSearch_Click(object sender, EventArgs e)
+        {
+            var c = new Customer();
+            c.searchCustomer(TBCSearch.Text.Trim(), DGCustomer);
+        }
+
+        private void BTCClear_Click(object sender, EventArgs e)
+        {
+            var c = new Customer();
+            TBCId.Text = "";
+            TBCMail.Text = "";
+            TBCName.Text = "";
+            TBCPhone.Text = "";
+            TBCSurname.Text = "";
+            c.loadData(DGCustomer);
+        }
     }
 }

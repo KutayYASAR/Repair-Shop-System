@@ -38,12 +38,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.customerUC1 = new RepairShopProject.CustomerUC();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customerUC1 = new RepairShopProject.CustomerUC();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -181,6 +181,14 @@
             this.panel3.Size = new System.Drawing.Size(1050, 682);
             this.panel3.TabIndex = 2;
             // 
+            // customerUC1
+            // 
+            this.customerUC1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.customerUC1.Location = new System.Drawing.Point(3, 21);
+            this.customerUC1.Name = "customerUC1";
+            this.customerUC1.Size = new System.Drawing.Size(1047, 661);
+            this.customerUC1.TabIndex = 3;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -237,14 +245,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(72, 72);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // customerUC1
-            // 
-            this.customerUC1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.customerUC1.Location = new System.Drawing.Point(0, 22);
-            this.customerUC1.Name = "customerUC1";
-            this.customerUC1.Size = new System.Drawing.Size(1047, 658);
-            this.customerUC1.TabIndex = 3;
             // 
             // newMainScreen
             // 
