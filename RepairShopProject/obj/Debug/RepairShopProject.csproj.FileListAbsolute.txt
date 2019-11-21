@@ -1,7 +1,6 @@
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.exe.config
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.exe
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.pdb
-C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csprojAssemblyReference.cache
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.Properties.Resources.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.Login.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.Register.resources
@@ -19,3 +18,5 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csproj.CopyComplete
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.MainScreen.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.newMainScreen.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.CustomerUC.resources

@@ -569,7 +569,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainScreen";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.tabControl1.ResumeLayout(false);
             this.TPCustomers.ResumeLayout(false);

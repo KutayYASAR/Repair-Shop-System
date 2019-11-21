@@ -49,9 +49,9 @@ namespace RepairShopProject
                 if(count == 1)
                 {
                     this.Hide();
-                    var m = new MainScreen();
+                    var m = new newMainScreen();
                     m.Closed += (s, args) => this.Close();
-                    m.StartPosition = FormStartPosition.Manual;
+                    m.StartPosition = FormStartPosition.CenterScreen;
                     m.Location = new Point(this.Location.X, this.Location.Y);
                     m.Show();
                 }
@@ -80,6 +80,11 @@ namespace RepairShopProject
         private void label1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

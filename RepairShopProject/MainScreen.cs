@@ -98,6 +98,7 @@ namespace RepairShopProject
             }
             catch (Exception)
             {
+                MessageBox.Show("Please only select the row header! ");
             }
         }
 

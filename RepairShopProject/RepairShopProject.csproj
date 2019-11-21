@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppointmentUC.Designer.cs">
+      <DependentUpon>AppointmentUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Appointment.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Department.cs" />
@@ -74,6 +95,18 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Supplier.cs" />
     <Compile Include="Classes\Ticket.cs" />
+    <Compile Include="CustomerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerUC.Designer.cs">
+      <DependentUpon>CustomerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InventoryUC.Designer.cs">
+      <DependentUpon>InventoryUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,27 +119,57 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="newMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newMainScreen.Designer.cs">
+      <DependentUpon>newMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentUC.Designer.cs">
+      <DependentUpon>PaymentUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupplierUC.Designer.cs">
+      <DependentUpon>SupplierUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TicketUC.Designer.cs">
+      <DependentUpon>TicketUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerUC.resx">
+      <DependentUpon>CustomerUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="newMainScreen.resx">
+      <DependentUpon>newMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,19 +191,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\appointment %282%29.png" />
     <Content Include="Assets\appointment.png" />
     <Content Include="Assets\avatar %281%29.png" />
+    <Content Include="Assets\avatar %283%29.png" />
+    <Content Include="Assets\boxes %282%29.png" />
     <Content Include="Assets\boxes.png" />
     <Content Include="Assets\credit-card.png" />
     <Content Include="Assets\customer-support.png" />
     <Content Include="Assets\envelope.png" />
+    <Content Include="Assets\factory %281%29.png" />
+    <Content Include="Assets\hand-tool.png" />
     <Content Include="Assets\icon.png" />
+    <Content Include="Assets\icon1.png" />
     <Content Include="Assets\key %281%29.png" />
     <Content Include="Assets\left-arrow.png" />
     <Content Include="Assets\man.png" />
     <Content Include="Assets\manufacture.png" />
+    <Content Include="Assets\money %281%29.png" />
+    <Content Include="Assets\options.png" />
     <Content Include="Assets\phone-call.png" />
     <Content Include="Assets\tools.ico" />
+    <None Include="Resources\hand-tool.png" />
+    <None Include="Resources\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
