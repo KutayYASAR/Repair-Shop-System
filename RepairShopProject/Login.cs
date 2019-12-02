@@ -13,6 +13,7 @@ namespace RepairShopProject
 {
     public partial class Login : Form
     {
+        public static int EmployeeID;
         Register r = null;
         public Login()
         {
@@ -54,19 +55,32 @@ namespace RepairShopProject
                     m.StartPosition = FormStartPosition.CenterScreen;
                     m.Location = new Point(this.Location.X, this.Location.Y);
                     m.Show();
+                    
                 }
                 else if (count == 0)
                 {
                     lblMsg.ForeColor = Color.DarkRed;
                     lblMsg.Text = "Email or Password is WRONG!";
                 }
+                dr.Close();
+                conc.Close();
+
+                SQLiteCommand cm = new SQLiteCommand("Select ID from Employee where Email = '" + TBMail.Text.Trim() + "' AND Password = '" + TBPass.Text.Trim() + "'", conc);
+                conc.Open();
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    EmployeeID = dr.GetInt32(0);
+                }
+                dr.Close();
+                conc.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
+       
         private void TBMail_Click(object sender, EventArgs e)
         {
             TBMail.Clear();

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTISearch = new System.Windows.Forms.Button();
             this.BTClear = new System.Windows.Forms.Button();
             this.DGInventory = new System.Windows.Forms.DataGridView();
@@ -59,6 +60,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.TBISale = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +88,7 @@
             this.BTClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTClear.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BTClear.ForeColor = System.Drawing.Color.White;
-            this.BTClear.Location = new System.Drawing.Point(916, 101);
+            this.BTClear.Location = new System.Drawing.Point(913, 102);
             this.BTClear.Name = "BTClear";
             this.BTClear.Size = new System.Drawing.Size(125, 28);
             this.BTClear.TabIndex = 41;
@@ -98,26 +102,34 @@
             this.DGInventory.AllowUserToDeleteRows = false;
             this.DGInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGInventory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGInventory.ColumnHeadersHeight = 24;
             this.DGInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGInventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGInventory.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.DGInventory.Location = new System.Drawing.Point(23, 113);
             this.DGInventory.Name = "DGInventory";
             this.DGInventory.ReadOnly = true;
             this.DGInventory.RowHeadersVisible = false;
             this.DGInventory.RowHeadersWidth = 125;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.DGInventory.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.DGInventory.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DGInventory.RowTemplate.Height = 64;
             this.DGInventory.Size = new System.Drawing.Size(704, 524);
             this.DGInventory.TabIndex = 40;
@@ -128,7 +140,7 @@
             this.TBIId.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.TBIId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBIId.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBIId.Location = new System.Drawing.Point(863, 103);
+            this.TBIId.Location = new System.Drawing.Point(799, 106);
             this.TBIId.Name = "TBIId";
             this.TBIId.Size = new System.Drawing.Size(47, 20);
             this.TBIId.TabIndex = 39;
@@ -137,7 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(832, 104);
+            this.label7.Location = new System.Drawing.Point(768, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(25, 19);
             this.label7.TabIndex = 38;
@@ -201,7 +213,7 @@
             "Computer",
             "Tablet",
             "Home Electronics"});
-            this.CBICategory.Location = new System.Drawing.Point(863, 56);
+            this.CBICategory.Location = new System.Drawing.Point(840, 58);
             this.CBICategory.Name = "CBICategory";
             this.CBICategory.Size = new System.Drawing.Size(178, 26);
             this.CBICategory.TabIndex = 34;
@@ -210,7 +222,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(767, 62);
+            this.label6.Location = new System.Drawing.Point(744, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 19);
             this.label6.TabIndex = 33;
@@ -221,7 +233,7 @@
             this.TBIManifact.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.TBIManifact.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBIManifact.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBIManifact.Location = new System.Drawing.Point(498, 18);
+            this.TBIManifact.Location = new System.Drawing.Point(485, 20);
             this.TBIManifact.Name = "TBIManifact";
             this.TBIManifact.Size = new System.Drawing.Size(242, 20);
             this.TBIManifact.TabIndex = 32;
@@ -231,7 +243,7 @@
             this.TBIAmount.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.TBIAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBIAmount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBIAmount.Location = new System.Drawing.Point(498, 59);
+            this.TBIAmount.Location = new System.Drawing.Point(485, 61);
             this.TBIAmount.Name = "TBIAmount";
             this.TBIAmount.Size = new System.Drawing.Size(242, 20);
             this.TBIAmount.TabIndex = 31;
@@ -241,9 +253,9 @@
             this.TBIBuyprice.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.TBIBuyprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBIBuyprice.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBIBuyprice.Location = new System.Drawing.Point(863, 18);
+            this.TBIBuyprice.Location = new System.Drawing.Point(799, 21);
             this.TBIBuyprice.Name = "TBIBuyprice";
-            this.TBIBuyprice.Size = new System.Drawing.Size(178, 20);
+            this.TBIBuyprice.Size = new System.Drawing.Size(79, 20);
             this.TBIBuyprice.TabIndex = 30;
             // 
             // TBIModel
@@ -253,7 +265,7 @@
             this.TBIModel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TBIModel.Location = new System.Drawing.Point(92, 59);
             this.TBIModel.Name = "TBIModel";
-            this.TBIModel.Size = new System.Drawing.Size(266, 20);
+            this.TBIModel.Size = new System.Drawing.Size(241, 20);
             this.TBIModel.TabIndex = 29;
             // 
             // TBIName
@@ -263,24 +275,24 @@
             this.TBIName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TBIName.Location = new System.Drawing.Point(92, 18);
             this.TBIName.Name = "TBIName";
-            this.TBIName.Size = new System.Drawing.Size(266, 20);
+            this.TBIName.Size = new System.Drawing.Size(241, 20);
             this.TBIName.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(769, 21);
+            this.label5.Location = new System.Drawing.Point(746, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.Size = new System.Drawing.Size(58, 19);
             this.label5.TabIndex = 27;
-            this.label5.Text = "BUY PRICE";
+            this.label5.Text = "BUY P.";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(364, 62);
+            this.label4.Location = new System.Drawing.Point(351, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 26;
@@ -290,7 +302,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(364, 21);
+            this.label3.Location = new System.Drawing.Point(351, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 19);
             this.label3.TabIndex = 25;
@@ -347,7 +359,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel1.Location = new System.Drawing.Point(498, 80);
+            this.panel1.Location = new System.Drawing.Point(485, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 1);
             this.panel1.TabIndex = 93;
@@ -355,7 +367,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel2.Location = new System.Drawing.Point(498, 39);
+            this.panel2.Location = new System.Drawing.Point(485, 41);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 1);
             this.panel2.TabIndex = 94;
@@ -365,7 +377,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel3.Location = new System.Drawing.Point(92, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 1);
+            this.panel3.Size = new System.Drawing.Size(241, 1);
             this.panel3.TabIndex = 95;
             // 
             // panel4
@@ -373,30 +385,61 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel4.Location = new System.Drawing.Point(92, 39);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(266, 1);
+            this.panel4.Size = new System.Drawing.Size(241, 1);
             this.panel4.TabIndex = 96;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel5.Location = new System.Drawing.Point(863, 39);
+            this.panel5.Location = new System.Drawing.Point(799, 42);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(178, 1);
+            this.panel5.Size = new System.Drawing.Size(79, 1);
             this.panel5.TabIndex = 97;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel7.Location = new System.Drawing.Point(863, 122);
+            this.panel7.Location = new System.Drawing.Point(799, 125);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(47, 1);
             this.panel7.TabIndex = 98;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel8.Location = new System.Drawing.Point(957, 39);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(79, 1);
+            this.panel8.TabIndex = 103;
+            // 
+            // TBISale
+            // 
+            this.TBISale.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TBISale.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TBISale.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TBISale.Location = new System.Drawing.Point(954, 21);
+            this.TBISale.Name = "TBISale";
+            this.TBISale.Size = new System.Drawing.Size(79, 20);
+            this.TBISale.TabIndex = 102;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(895, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 19);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "SALE P.";
             // 
             // InventoryUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.TBISale);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -466,5 +509,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox TBISale;
+        private System.Windows.Forms.Label label9;
     }
 }

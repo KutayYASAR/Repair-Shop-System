@@ -17,7 +17,6 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\EntityFrame
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data.SQLite.xml
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csproj.CopyComplete
-C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.MainScreen.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.newMainScreen.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.exe.manifest
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\bin\Debug\RepairShopProject.application
@@ -26,3 +25,7 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopP
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.CustomersUC.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.csprojAssemblyReference.cache
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.InventoryUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.SupplierUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.TicketUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.PaymentUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.clockinout.resources

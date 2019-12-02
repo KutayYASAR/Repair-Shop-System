@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Kutay\Desktop\try1\</PublishUrl>
+    <PublishUrl>C:\Users\Kutay\Desktop\try2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -110,6 +110,12 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Supplier.cs" />
     <Compile Include="Classes\Ticket.cs" />
+    <Compile Include="clockinout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clockinout.Designer.cs">
+      <DependentUpon>clockinout.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomersUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,12 +133,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainScreen.Designer.cs">
-      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="newMainScreen.cs">
       <SubType>Form</SubType>
@@ -171,17 +171,20 @@
     <Compile Include="TicketUC.Designer.cs">
       <DependentUpon>TicketUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="clockinout.resx">
+      <DependentUpon>clockinout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomersUC.resx">
       <DependentUpon>CustomersUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryUC.resx">
       <DependentUpon>InventoryUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScreen.resx">
-      <DependentUpon>MainScreen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="newMainScreen.resx">
       <DependentUpon>newMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUC.resx">
+      <DependentUpon>PaymentUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierUC.resx">
+      <DependentUpon>SupplierUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketUC.resx">
+      <DependentUpon>TicketUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -215,6 +224,8 @@
     <Content Include="Assets\avatar %283%29.png" />
     <Content Include="Assets\boxes %282%29.png" />
     <Content Include="Assets\boxes.png" />
+    <Content Include="Assets\clock %282%29.png" />
+    <Content Include="Assets\clock.png" />
     <Content Include="Assets\credit-card.png" />
     <Content Include="Assets\customer-support.png" />
     <Content Include="Assets\envelope.png" />

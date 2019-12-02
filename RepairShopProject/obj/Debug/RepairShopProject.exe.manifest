@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="RepairShopProject.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="RepairShopProject.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="RepairShopProject" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RepairShopProject.exe" size="848864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RepairShopProject.exe" size="786400">
       <assemblyIdentity name="RepairShopProject" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SYoFE2hq/Sub9zUiJ8JolA4XBUxeoIJLdRbJcbzMK9w=</dsig:DigestValue>
+        <dsig:DigestValue>EwASKojsJZcUWvu1JLqm4AB0HmTLlDkvGSIlE8QoSSo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -165,6 +165,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Wh8IS8bUIcSxkK69Kg6YMqIXnvzxChHjUzw9di+8d5c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\clock (2).png" size="1045">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>E8jFpzASaA97Xz9AFlcuZEy/+sePRnZsIO3OqtXA9ZY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Assets\clock.png" size="2872">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e3hZu0uzPqwg0p4Qmc9/ctP+S0q50WePLBbzu8tW1no=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Assets\credit-card.png" size="7961">

@@ -30,6 +30,7 @@ namespace RepairShopProject.Classes
         string model;
         string category;
         int buyPrice;
+        int salePrice;
         int amount;
         int id;
 
@@ -40,15 +41,16 @@ namespace RepairShopProject.Classes
         public int BuyPrice { get => buyPrice; set => buyPrice = value; }
         public int Amount { get => amount; set => amount = value; }
         public int Id { get => id; set => id = value; }
+        public int SalePrice { get => salePrice; set => salePrice = value; }
 
         public void setConnection()
         {
             con = new SQLiteConnection(@"data source = C:\Users\Kutay\Desktop\RepairShop.db");
         }
-        public void addProduct(string Name,string Manifacturer,string Model,string Category,int BuyPrice,int Amount, DataGridView Grid)
+        public void addProduct(string Name,string Manifacturer,string Model,string Category,int BuyPrice,int SalePrice,int Amount, DataGridView Grid)
         {
 
-            string txtQuery = "insert into Inventory (Name,Model,Amount,BuyPrice,Category,Manifact)values('" + Name + "','" + Model + "','" + Amount + "','" + BuyPrice + "','" + Category + "','" + Manifacturer + "')";
+            string txtQuery = "insert into Inventory (Name,Model,Amount,BuyPrice,Category,Manifact,SalePrice)values('" + Name + "','" + Model + "','" + Amount + "','" + BuyPrice + "','" + Category + "','" + Manifacturer + "','"+SalePrice+"')";
             executeQuery(txtQuery);
             loadData(Grid);
         }
@@ -58,9 +60,9 @@ namespace RepairShopProject.Classes
             executeQuery(txtQuery);
             loadData(Grid);
         }
-        public void updateProduct(string Name, string Manifacturer, string Model, string Category, int BuyPrice, int Amount,int ID, DataGridView Grid)
+        public void updateProduct(string Name, string Manifacturer, string Model, string Category, int BuyPrice, int SalePrice, int Amount,int ID, DataGridView Grid)
         {
-            string txtQuery = "update Inventory set Name='" + Name + "',Model='" + Model + "',Manifact='" + Manifacturer + "',Category='" + Category + "',Amount='" + Amount + "',BuyPrice='" + BuyPrice + "' where ID='" + ID + "'";
+            string txtQuery = "update Inventory set Name='" + Name + "',Model='" + Model + "',Manifact='" + Manifacturer + "',Category='" + Category + "',Amount='" + Amount + "',BuyPrice='" + BuyPrice + "',SalePrice='"+SalePrice+"' where ID='" + ID + "'";
             executeQuery(txtQuery);
             loadData(Grid);
         }
@@ -87,7 +89,6 @@ namespace RepairShopProject.Classes
             {
                 CommandText = "SELECT * FROM Inventory WHERE Name LIKE'%" + input + "%'";
             }
-
             DB = new SQLiteDataAdapter(CommandText, con);
             DS.Reset();
             DB.Fill(DS);
@@ -101,6 +102,28 @@ namespace RepairShopProject.Classes
             con.Open();
             cmd = con.CreateCommand();
             string CommandText = "select * from Inventory";
+            DB = new SQLiteDataAdapter(CommandText, con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            Grid.DataSource = DT;
+            con.Close();
+
+        }
+        public void loadData(DataGridView Grid, string loadtype)
+        {
+            setConnection();
+            con.Open();
+            cmd = con.CreateCommand();
+            string CommandText = "select * from Inventory";
+            if (loadtype == "nm")
+            {
+                CommandText = "select Name,Model from Inventory";
+            }
+            else if (loadtype == "inm")
+            {
+                CommandText = "select ID,Name,Model from Inventory";
+            }
             DB = new SQLiteDataAdapter(CommandText, con);
             DS.Reset();
             DB.Fill(DS);

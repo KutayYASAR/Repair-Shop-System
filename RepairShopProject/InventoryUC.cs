@@ -23,7 +23,7 @@ namespace RepairShopProject
             var p = new Product();
             try
             {
-                p.addProduct(TBIName.Text.Trim(), TBIManifact.Text.Trim(), TBIModel.Text.Trim(), CBICategory.SelectedItem.ToString(), int.Parse(TBIBuyprice.Text.Trim()), int.Parse(TBIAmount.Text.Trim()), DGInventory);
+                p.addProduct(TBIName.Text.Trim(), TBIManifact.Text.Trim(), TBIModel.Text.Trim(), CBICategory.SelectedItem.ToString(), int.Parse(TBIBuyprice.Text.Trim()), int.Parse(TBISale.Text.Trim()), int.Parse(TBIAmount.Text.Trim()),  DGInventory);
             }
             catch (Exception)
             {
@@ -51,7 +51,7 @@ namespace RepairShopProject
             var p = new Product();
             try
             {
-                p.updateProduct(TBIName.Text.Trim(), TBIManifact.Text.Trim(), TBIModel.Text.Trim(), CBICategory.SelectedItem.ToString(), int.Parse(TBIBuyprice.Text.Trim()), int.Parse(TBIAmount.Text.Trim()), int.Parse(TBIId.Text.Trim()), DGInventory);
+                p.updateProduct(TBIName.Text.Trim(), TBIManifact.Text.Trim(), TBIModel.Text.Trim(), CBICategory.SelectedItem.ToString(), int.Parse(TBIBuyprice.Text.Trim()), int.Parse(TBISale.Text.Trim()), int.Parse(TBIAmount.Text.Trim()),int.Parse(TBIId.Text.Trim()), DGInventory);
             }
             catch (Exception)
             {
@@ -62,13 +62,17 @@ namespace RepairShopProject
 
         private void BTClear_Click(object sender, EventArgs e)
         {
+            var p = new Product();
             TBIName.Text = "";
             TBIModel.Text = "";
             TBIManifact.Text = "";
             TBIAmount.Text = "";
             TBIBuyprice.Text = "";
             TBIId.Text = "";
+            TBISale.Text = "";
             CBICategory.SelectedIndex = 0;
+            p.loadData(DGInventory);
+            
         }
 
         private void BTISearch_Click(object sender, EventArgs e)
@@ -77,6 +81,7 @@ namespace RepairShopProject
             try
             {
                 p.searchProduct(TBISearch.Text.Trim(), DGInventory);
+                
             }
             catch (Exception)
             {
@@ -102,6 +107,7 @@ namespace RepairShopProject
                 TBIBuyprice.Text = DGInventory.Rows[e.RowIndex].Cells[4].Value.ToString();
                 CBICategory.SelectedItem = DGInventory.Rows[e.RowIndex].Cells[5].Value.ToString();
                 TBIManifact.Text = DGInventory.Rows[e.RowIndex].Cells[6].Value.ToString();
+                TBISale.Text = DGInventory.Rows[e.RowIndex].Cells[7].Value.ToString();
             }
             catch (Exception)
             {
