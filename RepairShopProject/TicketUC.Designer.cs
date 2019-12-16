@@ -58,7 +58,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.TBTId = new System.Windows.Forms.TextBox();
             this.BTTClear = new System.Windows.Forms.Button();
-            this.BTPAdd = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.TBPAdd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -354,20 +353,6 @@
             this.BTTClear.UseVisualStyleBackColor = false;
             this.BTTClear.Click += new System.EventHandler(this.BTTClear_Click);
             // 
-            // BTPAdd
-            // 
-            this.BTPAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
-            this.BTPAdd.FlatAppearance.BorderSize = 0;
-            this.BTPAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTPAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BTPAdd.ForeColor = System.Drawing.Color.White;
-            this.BTPAdd.Location = new System.Drawing.Point(888, 121);
-            this.BTPAdd.Name = "BTPAdd";
-            this.BTPAdd.Size = new System.Drawing.Size(108, 33);
-            this.BTPAdd.TabIndex = 105;
-            this.BTPAdd.Text = "Clear";
-            this.BTPAdd.UseVisualStyleBackColor = false;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -447,7 +432,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.TBPAdd);
-            this.Controls.Add(this.BTPAdd);
             this.Controls.Add(this.BTTClear);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TBTId);
@@ -498,7 +482,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox TBTId;
         private System.Windows.Forms.Button BTTClear;
-        private System.Windows.Forms.Button BTPAdd;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox TBPAdd;
         private System.Windows.Forms.Label label2;

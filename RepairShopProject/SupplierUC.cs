@@ -87,5 +87,14 @@ namespace RepairShopProject
             var c = new Supplier();
             c.loadData(DGSupplier);
         }
+
+        private void DGSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TBSId.Text = DGSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+                TBSInfo.Text= DGSupplier.Rows[e.RowIndex].Cells[4].Value.ToString();
+            TBSName.Text= DGSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TBSProduct.Text= DGSupplier.Rows[e.RowIndex].Cells[3].Value.ToString();
+            TBSContact.Text= DGSupplier.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
     }
 }

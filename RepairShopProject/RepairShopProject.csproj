@@ -100,6 +100,12 @@
     <Compile Include="AppointmentUC.Designer.cs">
       <DependentUpon>AppointmentUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttendanceUC.Designer.cs">
+      <DependentUpon>AttendanceUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Appointment.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Department.cs" />
@@ -116,11 +122,23 @@
     <Compile Include="clockinout.Designer.cs">
       <DependentUpon>clockinout.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfCodeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfCodeUC.Designer.cs">
+      <DependentUpon>ConfCodeUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomersUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomersUC.Designer.cs">
       <DependentUpon>CustomersUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUC.Designer.cs">
+      <DependentUpon>EmployeeUC.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryUC.cs">
       <SubType>UserControl</SubType>
@@ -134,6 +152,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerScreen.Designer.cs">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="newMainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +169,12 @@
     </Compile>
     <Compile Include="PaymentUC.Designer.cs">
       <DependentUpon>PaymentUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfitUC.Designer.cs">
+      <DependentUpon>ProfitUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,20 +201,38 @@
     <Compile Include="TicketUC.Designer.cs">
       <DependentUpon>TicketUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AppointmentUC.resx">
+      <DependentUpon>AppointmentUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceUC.resx">
+      <DependentUpon>AttendanceUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clockinout.resx">
       <DependentUpon>clockinout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfCodeUC.resx">
+      <DependentUpon>ConfCodeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomersUC.resx">
       <DependentUpon>CustomersUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUC.resx">
+      <DependentUpon>EmployeeUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InventoryUC.resx">
       <DependentUpon>InventoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerScreen.resx">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newMainScreen.resx">
       <DependentUpon>newMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentUC.resx">
       <DependentUpon>PaymentUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitUC.resx">
+      <DependentUpon>ProfitUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using RepairShopProject.Classes;
 
 namespace RepairShopProject
 {
@@ -38,16 +39,10 @@ namespace RepairShopProject
         { 
             try
             {
+                var em = new Employee();
                 SQLiteConnection conc = new SQLiteConnection(@"data source = C:\Users\Kutay\Desktop\RepairShop.db");
-                SQLiteCommand cmd = new SQLiteCommand("SELECT `Email`, `Password` FROM `Employee` WHERE `Email` = '" + TBMail.Text.Trim() + "' AND `Password` = '" + TBPass.Text.Trim() + "'", conc);
-                conc.Open();
-                SQLiteDataReader dr = cmd.ExecuteReader();
-                int count = 0;
-                while (dr.Read())
-                {
-                    count++;
-                }
-                if(count == 1)
+                
+                if (em.Login(TBMail.Text.Trim(),TBPass.Text.Trim())==1)
                 {
                     this.Hide();
                     var m = new newMainScreen();
@@ -57,17 +52,24 @@ namespace RepairShopProject
                     m.Show();
                     
                 }
-                else if (count == 0)
+                else if(em.Login(TBMail.Text.Trim(), TBPass.Text.Trim()) == 2)
+                {
+                    this.Hide();
+                    var m = new ManagerScreen();
+                    m.Closed += (s, args) => this.Close();
+                    m.StartPosition = FormStartPosition.CenterScreen;
+                    m.Location = new Point(this.Location.X, this.Location.Y);
+                    m.Show();
+                }
+                else
                 {
                     lblMsg.ForeColor = Color.DarkRed;
                     lblMsg.Text = "Email or Password is WRONG!";
                 }
-                dr.Close();
-                conc.Close();
 
                 SQLiteCommand cm = new SQLiteCommand("Select ID from Employee where Email = '" + TBMail.Text.Trim() + "' AND Password = '" + TBPass.Text.Trim() + "'", conc);
                 conc.Open();
-                dr = cm.ExecuteReader();
+                SQLiteDataReader dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
                     EmployeeID = dr.GetInt32(0);

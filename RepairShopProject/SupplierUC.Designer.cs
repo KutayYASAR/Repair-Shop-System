@@ -168,6 +168,7 @@
             this.DGSupplier.RowTemplate.Height = 64;
             this.DGSupplier.Size = new System.Drawing.Size(704, 524);
             this.DGSupplier.TabIndex = 102;
+            this.DGSupplier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGSupplier_CellClick);
             // 
             // panel5
             // 

@@ -96,6 +96,7 @@ namespace RepairShopProject.Classes
             Grid.DataSource = DT;
             con.Close();
         }
+        
         public void loadData(DataGridView Grid)
         {
             setConnection();

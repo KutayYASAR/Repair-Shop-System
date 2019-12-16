@@ -12,9 +12,12 @@ namespace RepairShopProject
 {
     public partial class Register : Form
     {
-        public string ConfCode ="kutay";
+
+        List<string> ConfCode = new List<string>();
+        string a;
         public Register()
-        {
+        {   
+            ConfCode.Add("123");
             InitializeComponent();
         }
 
@@ -30,7 +33,19 @@ namespace RepairShopProject
                 (TBPhone.Text.Trim() != "" && TBPhone.Text.Trim() != "Telefon")&&
                 (TBConfirm.Text.Trim() != "" && TBConfirm.Text.Trim() != "Confirmation Code"))
             {
-                if (TBConfirm.Text.Trim() != ConfCode)
+                SQLiteCommand cm = new SQLiteCommand("Select Conf from Confirmation", con);
+                con.Open();
+                SQLiteDataReader dr = cm.ExecuteReader();
+                int i = 0;
+                while (dr.Read())
+                {
+                    a = dr.GetString(0);
+                    ConfCode.Add(a);
+                    
+                }
+                dr.Close();
+                con.Close();
+                if (!ConfCode.ToArray().Contains<string>(TBConfirm.Text.Trim()))
                 {
                     lblMsg.ForeColor = Color.DarkRed;
                     lblMsg.Text = "Wrong Conf. Code";

@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RepairShopProject.exe" size="786400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RepairShopProject.exe" size="955360">
       <assemblyIdentity name="RepairShopProject" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EwASKojsJZcUWvu1JLqm4AB0HmTLlDkvGSIlE8QoSSo=</dsig:DigestValue>
+        <dsig:DigestValue>9ks1oGyRyCEb015XINn04wNLgsXWxZopWp5iZIP09aU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

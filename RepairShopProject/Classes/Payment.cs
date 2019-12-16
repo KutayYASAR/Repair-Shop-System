@@ -98,7 +98,84 @@ namespace RepairShopProject.Classes
             Grid.DataSource = DT;
             con.Close();
         }
-
+        public void searchbyDate(string input1,string input2, DataGridView Grid)
+        {
+            string CommandText;
+            setConnection();
+            con.Open();
+            cmd = con.CreateCommand();
+            CommandText = "Select * From Payments where Date BETWEEN date('" + input1+ "') and date('" + input2+ "')";
+            DB = new SQLiteDataAdapter(CommandText, con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            Grid.DataSource = DT;
+            con.Close();
+        }
+        public int returnProfit(string input1, string input2)
+        {
+            setConnection();
+            con.Open();
+            string txtQuery = "Select SUM(Profit) FROM Payments Where Date BETWEEN date('" + input1 + "') and date('" + input2 + "') ";
+            SQLiteCommand cmd = new SQLiteCommand(txtQuery, con);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            int val = 0;
+            while (reader.Read())
+            {
+                val = reader.GetInt32(0);
+            }
+            reader.Close();
+            con.Close();
+            return val;
+        }
+        public int returnSale(string input1, string input2)
+        {
+            setConnection();
+            con.Open();
+            string txtQuery = "Select SUM(SalePrice) FROM Payments Where Date BETWEEN date('" + input1 + "') and date('" + input2 + "') ";
+            SQLiteCommand cmd = new SQLiteCommand(txtQuery, con);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            int val = 0;
+            while (reader.Read())
+            {
+                val = reader.GetInt32(0);
+            }
+            reader.Close();
+            con.Close();
+            return val;
+        }
+        public int returnBuy(string input1, string input2)
+        {
+            setConnection();
+            con.Open();
+            string txtQuery = "Select SUM(BuyPrice) FROM Payments Where Date BETWEEN date('" + input1 + "') and date('" + input2 + "') ";
+            SQLiteCommand cmd = new SQLiteCommand(txtQuery, con);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            int val = 0;
+            while (reader.Read())
+            {
+                val = reader.GetInt32(0);
+            }
+            reader.Close();
+            con.Close();
+            return val;
+        }
+        public int returnCount(string input1,string input2)
+        {
+            setConnection();
+            con.Open();
+            string txtQuery = "Select * FROM Payments Where Date BETWEEN date('" + input1 + "') and date('" + input2 + "') ";
+            SQLiteCommand cmd = new SQLiteCommand(txtQuery, con);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            int val = 0;
+            while (reader.Read())
+            {
+                val++;
+            }
+            reader.Close();
+            con.Close();
+            return val;
+        }
         public void removeTicket(int ID, DataGridView Grid)
         {
             string txtQuery = "delete from Payments where ID='" + ID + "'";
@@ -106,9 +183,9 @@ namespace RepairShopProject.Classes
             
           
         }
-        public void addPayment(string Date,int EmployeeID,int CustomerID,int TicketID,int Price,string Method)
+        public void addPayment(string Date,int EmployeeID,int CustomerID,int TicketID,int BuyPrice,int SalePrice,int Profit,string Method)
         {
-            string txtQuery = "insert into Payments (Date,EmployeeID,CustomerID,Price,Method)values('" + Date+ "','" + EmployeeID+ "','" + CustomerID+ "','" + Price+ "','" + Method+ "')";
+            string txtQuery = "insert into Payments (Date,EmployeeID,CustomerID,BuyPrice,SalePrice,Profit,Method)values('" + Date+ "','" + EmployeeID+ "','" + CustomerID+ "','" + BuyPrice+ "','"+SalePrice+"','"+Profit+"','" +Method+ "')";
             string txtQuery1 = "delete from Product_To_Ticket where TicketID = '" + TicketID + "'";
             string txtQuery2 = "delete from Tickets where ID = '" + TicketID + "'";
             executeQuery(txtQuery);
@@ -132,7 +209,23 @@ namespace RepairShopProject.Classes
             con.Close();
             return val;
         }
-        
+        public int totalBPrice(int input)
+        {
+            setConnection();
+            con.Open();
+            string txtQuery = "Select SUM(BuyPrice) FROM Inventory Where (Inventory.ID in(Select ProductID from Product_To_Ticket where TicketID ='" + input + "'))";
+            SQLiteCommand cmd = new SQLiteCommand(txtQuery, con);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            int val = 0;
+            while (reader.Read())
+            {
+                val = reader.GetInt32(0);
+            }
+            reader.Close();
+            con.Close();
+            return val;
+        }
+
         public void addPaymentOption(string input)
         {
             string txtQuery = "insert into PaymentM (Method)values('" + input + "')";

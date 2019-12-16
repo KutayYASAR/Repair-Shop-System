@@ -18,6 +18,7 @@ namespace RepairShopProject
         int id;
         string DiscountType;
         string Texttoprint;
+        int BPrice;
         public PaymentUC()
         {
             InitializeComponent();
@@ -76,7 +77,8 @@ namespace RepairShopProject
                 t.used(int.Parse(DGTicket.Rows[e.RowIndex].Cells[0].Value.ToString()), DGUsed);
                 TBPTotal.Text = p.totalPrice(int.Parse(DGTicket.Rows[e.RowIndex].Cells[0].Value.ToString())).ToString();
                 id = int.Parse(DGTicket.Rows[e.RowIndex].Cells[0].Value.ToString());
-                
+                BPrice = p.totalBPrice(int.Parse(DGTicket.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                Console.WriteLine(BPrice);
             }
             catch (Exception x)
             {
@@ -126,12 +128,56 @@ namespace RepairShopProject
                 {
                     MessageBox.Show("Choose the payment method.");
                 }
+                else if((TBPMethod.Text == "GiftCard") || (TBPMethod.Text.Contains("Gift")))
+                {
+                    var g = new GiftCard();
+                    try
+                    {
+                        int balance = g.showBalance(TBPGift.Text.Trim());
+                        if (balance <int.Parse(TBPTotal.Text.Trim()))
+                        {
+                            MessageBox.Show("Not enough balance or wrong Code!");
+                        }
+                        else
+                        {
+                            g.editBalance((balance - int.Parse(TBPTotal.Text.Trim())), TBPGift.Text.Trim());
+                            var p = new Payment();
+
+                            p.addPayment(DateTime.Now.ToString("yyyy-MM-dd"), Login.EmployeeID,
+                                int.Parse(DGCustomer.Rows[0].Cells[0].Value.ToString()), id, BPrice,
+                                int.Parse(TBPTotal.Text.Trim()), (int.Parse(TBPTotal.Text.Trim()) - BPrice), TBPMethod.Text);
+                            var t = new Ticket();
+                            var p1 = new Payment();
+                            var p2 = new Payment();
+                            string txtQuery = "SELECT ID,CustomerID,Info FROM Tickets";
+                            p1.loadData(DGPM, "SELECT * FROM PaymentM");
+                            t.loadData(DGTicket, txtQuery);
+                            p2.loadData(DGPD, "Select * FROM PaymentD");
+
+
+                            printDocument1.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+                            Random random = new Random();
+                            int r = random.Next(0, 9999);
+                            string file = DGCustomer.Rows[0].Cells[1].Value.ToString() + DGCustomer.Rows[0].Cells[2].Value.ToString() + r.ToString();
+                            string directory = @"C:\Users\Kutay\Desktop\Reciepts";
+                            printDocument1.PrinterSettings.PrintToFile = true;
+                            printDocument1.PrinterSettings.PrintFileName = Path.Combine(directory, file + ".pdf");
+                            printDocument1.Print();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wrong giftcard");
+                    }
+                     
+                }
                 else
                 {
                     var p = new Payment();
-                    p.addPayment(DateTime.Now.ToString(), Login.EmployeeID,
-                        int.Parse(DGCustomer.Rows[0].Cells[0].Value.ToString()), id,
-                        int.Parse(TBPTotal.Text.Trim()), TBPMethod.Text);
+                    
+                    p.addPayment(DateTime.Now.ToString("yyyy-MM-dd"), Login.EmployeeID,
+                        int.Parse(DGCustomer.Rows[0].Cells[0].Value.ToString()), id,BPrice,
+                        int.Parse(TBPTotal.Text.Trim()), (int.Parse(TBPTotal.Text.Trim())-BPrice), TBPMethod.Text);
                     var t = new Ticket();
                     var p1 = new Payment();
                     var p2 = new Payment();
@@ -153,7 +199,7 @@ namespace RepairShopProject
             }
             catch(Exception x)
             {
-                MessageBox.Show("Choose the ticket");
+                MessageBox.Show(x.Message);
             }
 
         }

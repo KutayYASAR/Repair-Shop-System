@@ -29,3 +29,9 @@ C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopP
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.TicketUC.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.PaymentUC.resources
 C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.clockinout.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.AppointmentUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.ManagerScreen.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.AttendanceUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.ConfCodeUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.EmployeeUC.resources
+C:\Users\Kutay\Desktop\RepairShopProject\RepairShopProject\obj\Debug\RepairShopProject.ProfitUC.resources

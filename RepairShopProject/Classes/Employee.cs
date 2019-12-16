@@ -11,11 +11,11 @@ namespace RepairShopProject.Classes
 {
     class Employee
     {
-        private SQLiteConnection con;
-        private SQLiteCommand cmd;
-        private SQLiteDataAdapter DB;
-        private DataSet DS = new DataSet();
-        private DataTable DT = new DataTable();
+        protected SQLiteConnection con;
+        protected SQLiteCommand cmd;
+        protected SQLiteDataAdapter DB;
+        protected DataSet DS = new DataSet();
+        protected DataTable DT = new DataTable();
         int id;
         string name;
         string surname;
@@ -37,7 +37,7 @@ namespace RepairShopProject.Classes
         public void addEmployee(string Name, string Surname, string Email, string Password, string Phone, DataGridView Grid)
         {
 
-            string txtQuery = "insert into Employee (Name,Surname,Email,Password,Phone)values('" + Name + "','" + Surname + "','" + Email + "','" + Password + "','" + Phone + "')";
+            string txtQuery = "insert into Employee (Name,Surname,Email,Password,Phone,isManager)values('" + Name + "','" + Surname + "','" + Email + "','" + Password + "','" + Phone + "','"+0+"')";
             executeQuery(txtQuery);
             loadData(Grid);
         }
@@ -67,7 +67,20 @@ namespace RepairShopProject.Classes
             setConnection();
             con.Open();
             cmd = con.CreateCommand();
-            string CommandText = "select * from Employee";
+            string CommandText = "select ID,Name,Surname,Email,Password,Phone from Employee";
+            DB = new SQLiteDataAdapter(CommandText, con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            Grid.DataSource = DT;
+            con.Close();
+        }
+        public void loadData(string txtQuery,DataGridView Grid)
+        {
+            setConnection();
+            con.Open();
+            cmd = con.CreateCommand();
+            string CommandText = txtQuery;
             DB = new SQLiteDataAdapter(CommandText, con);
             DS.Reset();
             DB.Fill(DS);
@@ -120,6 +133,60 @@ namespace RepairShopProject.Classes
             DT = DS.Tables[0];
             Grid.DataSource = DT;
             con.Close();
+        }
+        public int Login(string mail,string password)
+        {
+            SQLiteConnection conc = new SQLiteConnection(@"data source = C:\Users\Kutay\Desktop\RepairShop.db");
+            SQLiteCommand cmd = new SQLiteCommand("SELECT `Email`, `Password` FROM `Employee` WHERE `Email` = '" + mail + "' AND `Password` = '" + password + "'", conc);
+            conc.Open();
+            SQLiteCommand cmd2 = new SQLiteCommand("Select Email,Password FROM Employee WHERE Email = '" + mail + "' and Password = '" + password + "' and isManager = '" + 1 + "' ", conc);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            SQLiteDataReader dr1 = cmd2.ExecuteReader();
+            int count = 0;
+            int countmanager = 0;
+            while (dr1.Read())
+            {
+                countmanager++;
+            }
+            while (dr.Read())
+            {
+                count++;
+            }
+            if (countmanager==1)
+            {
+                return 2;
+            }
+            if (count == 1)
+            {
+                return 1;
+
+            }
+            else if (count == 0)
+            {
+                return 0;
+            }
+            else
+                return 0;
+            dr.Close();
+            dr1.Close();
+            conc.Close();
+        }
+        public void Logout(Form form)
+        {
+            DialogResult dg = new DialogResult();
+            dg=MessageBox.Show("Logging out?","LOGOUT",MessageBoxButtons.YesNo);
+            if (dg == DialogResult.Yes)
+            {
+                form.Hide();
+                Login l = new Login();
+                l.Closed += (s, args) => form.Close();
+                l.StartPosition = FormStartPosition.Manual;
+                l.Location = new System.Drawing.Point(form.Location.X, form.Location.Y);
+                l.Show();
+            }
+                
+            else
+                return;
         }
     }
 }

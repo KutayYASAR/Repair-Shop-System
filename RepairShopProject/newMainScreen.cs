@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RepairShopProject.Classes;
 
 namespace RepairShopProject
 {
@@ -17,7 +18,7 @@ namespace RepairShopProject
         public SupplierUC supplierUC1 = new SupplierUC();
         public TicketUC ticketUC1 = new TicketUC();
         public PaymentUC paymentUC1 = new PaymentUC();
-
+        public AppointmentUC appointmentUC1 = new AppointmentUC();
         
         public newMainScreen()
         {
@@ -28,6 +29,7 @@ namespace RepairShopProject
             Controls.Add(supplierUC1);
             Controls.Add(ticketUC1);
             Controls.Add(paymentUC1);
+            Controls.Add(appointmentUC1);
             supplierUC1.Height = panel3.Height;
             supplierUC1.Location = panel3.Location;
             supplierUC1.Top = panel3.Top + 25;
@@ -43,6 +45,9 @@ namespace RepairShopProject
             ticketUC1.Height = panel3.Height;
             ticketUC1.Location = panel3.Location;
             ticketUC1.Top = panel3.Top + 25;
+            appointmentUC1.Height = panel3.Height;
+            appointmentUC1.Location = panel3.Location;
+            appointmentUC1.Top = panel3.Top + 25;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +58,7 @@ namespace RepairShopProject
             inventoryUC1.Hide();
             supplierUC1.Hide();
             ticketUC1.Hide();
+            appointmentUC1.Hide();
             paymentUC1.Hide();
             customersUC1.Show();
             customersUC1.BringToFront();
@@ -67,6 +73,7 @@ namespace RepairShopProject
             supplierUC1.Hide();
             customersUC1.Hide();
             ticketUC1.Hide();
+            appointmentUC1.Hide();
             paymentUC1.Hide();
             inventoryUC1.Show();
             inventoryUC1.BringToFront();
@@ -82,6 +89,8 @@ namespace RepairShopProject
             customersUC1.Hide();
             paymentUC1.Hide();
             ticketUC1.Hide();
+            appointmentUC1.Show();
+            appointmentUC1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -93,6 +102,7 @@ namespace RepairShopProject
             inventoryUC1.Hide();
             customersUC1.Hide();
             ticketUC1.Hide();
+            appointmentUC1.Hide();
             paymentUC1.Show();
             paymentUC1.BringToFront();
         }
@@ -106,6 +116,7 @@ namespace RepairShopProject
             customersUC1.Hide();
             ticketUC1.Hide();
             paymentUC1.Hide();
+            appointmentUC1.Hide();
             supplierUC1.Show();
             supplierUC1.BringToFront();
         }
@@ -119,6 +130,7 @@ namespace RepairShopProject
             customersUC1.Hide();
             paymentUC1.Hide();
             supplierUC1.Hide();
+            appointmentUC1.Hide();
             ticketUC1.Show();
             ticketUC1.BringToFront();
         }
@@ -131,6 +143,12 @@ namespace RepairShopProject
             c.StartPosition = FormStartPosition.CenterScreen;
             c.Location = new Point(this.Location.X, this.Location.Y);
             c.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            var em = new Employee();
+            em.Logout(this);
         }
     }
 }
